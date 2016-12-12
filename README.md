@@ -1,27 +1,35 @@
 # Notes in Machine Learning with Python
----
+
+--------------------------------------------------------------------------------
+
 ## Environment Problem
-+ [numpy and scipy](https://www.zhihu.com/question/30188492?sort=created "problem on windows")
-+ normal ones:pip install pandas quandl sklearn numpy matplotlib
-+ [pythonprogramming.net](https://pythonprogramming.net/ "Great")
-+ [github](https://github.com/ProHiryu/Coursera_courses/tree/master/courses/Machine%20Learning%20with%20Python)
+
+- [numpy and scipy](https://www.zhihu.com/question/30188492?sort=created "problem on windows")
+- normal ones:pip install pandas quandl sklearn numpy matplotlib
+- [pythonprogramming.net](https://pythonprogramming.net/ "Great")
+- [github](https://github.com/ProHiryu/Coursera_courses/tree/master/courses/Machine%20Learning%20with%20Python)
 
 ## Regression
-+ [reference](http://pandas.pydata.org/pandas-docs/stable/indexing.html)
-+ ``dataframe.shift(num)`` just move the dataset num times rightwards
-+ ``dataframe.iloc[num]`` Selection by Position - is primarily integer position based (from 0 to length-1 of the axis)
-+ ``dataframe.loc[text]`` Selection by Label
-+ python list - ``list[-1]`` the last element of the list
-+ python date:
-  - time string : ``time.ctime()`` 'Mon Dec 17 21:02:55 2012'
-  - datetime tuple(datetime obj) : ``datetime.now()`` ``datetime.datetime(2012, 12, 17, 21, 3, 44, 139715)``
-  - time tuple(time obj) : ``time.struct_time(tm_year=2008, tm_mon=11, tm_mday=10, tm_hour=17, tm_min=53, tm_sec=59, tm_wday=0, tm_yday=315, tm_isdst=-1)``
-  - timestamp : Ê±¼ä´ÁÀàĞÍ:×Ô1970Äê1ÔÂ1ÈÕ(00:00:00 GMT)ÒÔÀ´µÄÃëÊı
+
+- [reference](http://pandas.pydata.org/pandas-docs/stable/indexing.html)
+- `dataframe.shift(num)` just move the dataset num times rightwards
+- `dataframe.iloc[num]` Selection by Position - is primarily integer position based (from 0 to length-1 of the axis)
+- `dataframe.loc[text]` Selection by Label
+- python list - `list[-1]` the last element of the list
+- python date:
+
+  - time string : `time.ctime()` 'Mon Dec 17 21:02:55 2012'
+  - datetime tuple(datetime obj) : `datetime.now()` `datetime.datetime(2012, 12, 17, 21, 3, 44, 139715)`
+  - time tuple(time obj) : `time.struct_time(tm_year=2008, tm_mon=11, tm_mday=10, tm_hour=17, tm_min=53, tm_sec=59, tm_wday=0, tm_yday=315, tm_isdst=-1)`
+  - timestamp : Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:ï¿½ï¿½1970ï¿½ï¿½1ï¿½ï¿½1ï¿½ï¿½(00:00:00 GMT)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   - ![NOT FOUND!](http://s9.sinaimg.cn/large/b09d4602xd10ea8f9ab88&690 "change relation")
-+ **python iteration ``np.nan for _ in range()`` means nothing,the variable is not going to be used** - [nan, nan, nan, nan, nan, 781.29480101781269]
-+ python list : xs*ys means every element in xs times ys by the order of index
+
+- **python iteration `np.nan for _ in range()` means nothing,the variable is not going to be used** - [nan, nan, nan, nan, nan, 781.29480101781269]
+
+- python list : xs*ys means every element in xs times ys by the order of index
 
 ## Matplotlib
+
 ```python
 style.use('ggplot')
 
@@ -32,9 +40,11 @@ plt.xlabel('Date')
 plt.ylabel('Price')
 plt.show()
 ```
-+ ```plt.scatter()``` ---> scatter
+
+- `plt.scatter()` ---> scatter
 
 ## Pickle
+
 ```python
 # clf = LinearRegression(n_jobs=-1)
 # clf.fit(X_train, y_train)
@@ -46,44 +56,59 @@ clf = pickle.load(pickle_in)
 ```
 
 ## Classification
-### K Nearest Neighbors Application
-+ [dataset](http://archive.ics.uci.edu/ml/datasets.html "UCI")
-+ numpy.reshape : 
-```python
-example_measures = np.array([4,2,1,1,1,2,3,2,1])
-example_measures = example_measures.reshape(len(example_measures),-1)
 
-## a£º½«Òª±»ÖØËÜµÄÀàÊı×é»òÊı×é
-## newshape£ºÕûÊıÖµ»òÕûÊıÔª×é¡£ĞÂµÄĞÎ×´Ó¦¸Ã¼æÈİÓÚÔ­Ê¼ĞÎ×´¡£Èç¹ûÊÇÒ»¸öÕûÊıÖµ£¬±íÊ¾Ò»¸öÒ»Î¬Êı×éµÄ³¤¶È£»Èç¹ûÊÇÔª×é£¬Ò»¸öÔªËØÖµ¿ÉÒÔÎª-1£¬´ËÊ±¸ÃÔªËØÖµ±íÊ¾ÎªÖ¸¶¨£¬´ËÊ±»á´ÓÊı×éµÄ³¤¶ÈºÍÊ£ÓàµÄÎ¬¶ÈÖĞÍÆ¶Ï³ö
+### K Nearest Neighbors Application
+
+- [dataset](http://archive.ics.uci.edu/ml/datasets.html "UCI")
+- numpy.reshape :
+
+```python
+example_measures = np.array([4,2,1,1,1,2,3,2,1]) example_measures = example_measures.reshape(len(example_measures),-1)
+
+## aï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+## newshapeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½é¡£ï¿½Âµï¿½ï¿½ï¿½×´Ó¦ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ï¿½Ô­Ê¼ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ê¾Ò»ï¿½ï¿½Ò»Î¬ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½é£¬Ò»ï¿½ï¿½Ôªï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Îª-1ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ôªï¿½ï¿½Öµï¿½ï¿½Ê¾ÎªÖ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½Èºï¿½Ê£ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶Ï³ï¿½
 
 ```
-+ lib - warnings : ```warnings.warn('K is set to a value less than total voting groups!')```
-+ numpy.linalg.norm : ```np.linalg.norm(np.array(features) - np.array(predict))```
-+ **python dictionary**:
-```python
-    dataset = {'k':[[1,2],[2,3],[3,1]], 'r':[[6,5],[7,7],[8,6]]}
+
++ lib - warnings : `warnings.warn('K is set to a value less than total voting groups!')`
+
+- numpy.linalg.norm : `np.linalg.norm(np.array(features) - np.array(predict))`
+- **python dictionary**:
+
+  ```python
+  dataset = {'k':[[1,2],[2,3],[3,1]], 'r':[[6,5],[7,7],[8,6]]}
     new_features = [5,7]
     for group in dataset:
         for features in data[group]:
             euclidean_distance = np.linalg.norm(np.array(features) - np.array(predict))
             distances.append([euclidean_distance, group])
-```
-+ Lib - Counters : ```from collections import Counter```
-  - ```vote_result = Counter(votes).most_common(1)[0][0]```
+  ```
+
+- Lib - Counters : `from collections import Counter`
+
+  - `vote_result = Counter(votes).most_common(1)[0][0]`
   - It gives us a list of tuple,the '1' in here determines the numbers of the most common tuples
   - tuples:(the most common element,numbers of the most common)
 
-+ use the [-num] of list flexbily
-```python
-    test_size = 0.2
+- use the [-num] of list flexbily
+
+  ```python
+  test_size = 0.2
     train_set = {2:[], 4:[]}
     test_set = {2:[], 4:[]}
     train_data = full_data[:-int(test_size*len(full_data))]
     test_data = full_data[-int(test_size*len(full_data)):]
-    
+
     for i in train_data:
         train_set[i[-1]].append(i[:-1])
-    
+
     for i in test_data:
         test_set[i[-1]].append(i[:-1])
-```
+  ```
+
+## Kernels
+
+> change the linearly inseparable data into a linearly separable data
+
+$$ x=\frac{-b\pm\sqrt{b^2-4ac}}{2a} $$
