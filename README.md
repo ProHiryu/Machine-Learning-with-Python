@@ -1,7 +1,5 @@
 # Notes in Machine Learning with Python
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
 --------------------------------------------------------------------------------
 
 ## Environment Problem
@@ -23,7 +21,7 @@
   - time string : `time.ctime()` 'Mon Dec 17 21:02:55 2012'
   - datetime tuple(datetime obj) : `datetime.now()` `datetime.datetime(2012, 12, 17, 21, 3, 44, 139715)`
   - time tuple(time obj) : `time.struct_time(tm_year=2008, tm_mon=11, tm_mday=10, tm_hour=17, tm_min=53, tm_sec=59, tm_wday=0, tm_yday=315, tm_isdst=-1)`
-  - timestamp : ʱ��������:��1970��1��1��(00:00:00 GMT)����������
+  - timestamp : 时间戳类型:自1970年1月1日(00:00:00 GMT)以来的秒数
   - ![NOT FOUND!](http://s9.sinaimg.cn/large/b09d4602xd10ea8f9ab88&690 "change relation")
 
 - **python iteration `np.nan for _ in range()` means nothing,the variable is not going to be used** - [nan, nan, nan, nan, nan, 781.29480101781269]
@@ -65,11 +63,12 @@ clf = pickle.load(pickle_in)
 - numpy.reshape :
 
 ```python
-example_measures = np.array([4,2,1,1,1,2,3,2,1]) example_measures = example_measures.reshape(len(example_measures),-1)
+example_measures = np.array([4,2,1,1,1,2,3,2,1])
+example_measures = example_measures.reshape(len(example_measures),-1)
 
-## a����Ҫ�����ܵ�������������
-
-## newshape������ֵ������Ԫ�顣�µ���״Ӧ�ü�����ԭʼ��״��������һ������ֵ����ʾһ��һά�����ĳ��ȣ�������Ԫ�飬һ��Ԫ��ֵ����Ϊ-1����ʱ��Ԫ��ֵ��ʾΪָ������ʱ���������ĳ��Ⱥ�ʣ����ά�����ƶϳ�
+## a：将要被重塑的类数组或数组
+## newshape：整数值或整数元组。新的形状应该兼容于原始形状。如果是一个整数值，表示一个一维数组的长度；
+## 如果是元组，一个元素值可以为-1，此时该元素值表示为指定，此时会从数组的长度和剩余的维度中推断出
 ```
 
 - lib - warnings : `warnings.warn('K is set to a value less than total voting groups!')`
