@@ -1,5 +1,7 @@
 # Notes in Machine Learning with Python
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 --------------------------------------------------------------------------------
 
 ## Environment Problem
@@ -68,12 +70,12 @@ example_measures = np.array([4,2,1,1,1,2,3,2,1]) example_measures = example_meas
 ## a����Ҫ�����ܵ�������������
 
 ## newshape������ֵ������Ԫ�顣�µ���״Ӧ�ü�����ԭʼ��״��������һ������ֵ����ʾһ��һά�����ĳ��ȣ�������Ԫ�飬һ��Ԫ��ֵ����Ϊ-1����ʱ��Ԫ��ֵ��ʾΪָ������ʱ���������ĳ��Ⱥ�ʣ����ά�����ƶϳ�
-
 ```
 
-+ lib - warnings : `warnings.warn('K is set to a value less than total voting groups!')`
+- lib - warnings : `warnings.warn('K is set to a value less than total voting groups!')`
 
 - numpy.linalg.norm : `np.linalg.norm(np.array(features) - np.array(predict))`
+
 - **python dictionary**:
 
   ```python
