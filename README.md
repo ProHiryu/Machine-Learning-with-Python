@@ -111,5 +111,3 @@ example_measures = example_measures.reshape(len(example_measures),-1)
 ## Kernels
 
 > change the linearly inseparable data into a linearly separable data
-
-$$ x=\frac{-b\pm\sqrt{b^2-4ac}}{2a} $$
