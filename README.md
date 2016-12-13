@@ -111,3 +111,42 @@ example_measures = example_measures.reshape(len(example_measures),-1)
 ## Kernels
 
 > change the linearly inseparable data into a linearly separable data
+
+### Why Kernels
+
+```
+K(x ,x') = z.z' //The Kernel function
+
+z = function(x)
+z' = function(x-)
+
+X = [x1,x2] //simple dataset
+
+// the kernel wants to be 2nd order polynomial
+
+Z = [1,x1,x2,x1^2,x2^2,x1x2]
+
+Z' = [1,x1',x2',x1'^2,x2'^2,x1'x2']
+
+K(x ,x') = Z.Z' = 1+x1x1'+ ... +x1x2x1'x2'
+
+K(x, x') = (1 + x1x1' + ... + xnxn')^p // polynomial Kernel
+
+p: order of polynomial
+n: dimensions
+
+// Learn more about Exponential kernel for RBF
+```
+
+### Soft Margin SVM
+
+> google: svm kernel visualization
+> overlapping --> softmax
+> polynomial kernel
+
+## SVM Parameters
+
+> multi-classes
+
+- OVR : one vs rest
+- OVO : one vs one
