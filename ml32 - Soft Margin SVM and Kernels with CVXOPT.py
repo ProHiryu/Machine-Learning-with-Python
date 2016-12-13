@@ -1,16 +1,35 @@
+# Mathieu Blondel, September 2010
+# License: BSD 3 clause
+# http://www.mblondel.org/journal/2010/09/19/support-vector-machines-in-python/
+
+# visualizing what translating to another dimension does
+# and bringing back to 2D:
+# https://www.youtube.com/watch?v=3liCbRZPrZA
+
+# Docs: http://cvxopt.org/userguide/coneprog.html#quadratic-programming
+# Docs qp example: http://cvxopt.org/examples/tutorial/qp.html
+
+# Nice tutorial:
+# https://courses.csail.mit.edu/6.867/wiki/images/a/a7/Qp-cvxopt.pdf
+
+
 import numpy as np
 from numpy import linalg
 import cvxopt
 import cvxopt.solvers
 
+
 def linear_kernel(x1, x2):
     return np.dot(x1, x2)
 
-def polynomial_kernel(x, y, p=3):
+
+def polynomial_kernel(x, y, p=3):ß
     return (1 + np.dot(x, y)) ** p
+
 
 def gaussian_kernel(x, y, sigma=5.0):
     return np.exp(-linalg.norm(x - y)**2 / (2 * (sigma ** 2)))
+
 
 class SVM(object):
 
