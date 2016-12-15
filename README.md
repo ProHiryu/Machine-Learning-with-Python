@@ -150,3 +150,36 @@ n: dimensions
 - OVO : one vs one
 - [sklearn.svm.svc](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)
 - decision_function_shape(default = 'ovr')
+
+## Clustering and Unsupervised Machine Learning
+
+### dealing with non-numeric data
+
+- get the unique value of the columns
+- set the numbers of value id
+- use the id as the numeric data of this column
+
+  ```python
+  def handle_non_numerical_data(df):
+        columns = df.columns.values
+        for column in columns:
+            text_digit_vals = {}
+            def convert_to_int(val):
+                return text_digit_vals[val]
+
+            if df[column].dtype != np.int64 and df[column].dtype != np.float64:
+                column_contents = df[column].values.tolist()
+                unique_elements = set(column_contents)
+                x = 0
+                for unique in unique_elements:
+                    if unique not in text_digit_vals:
+                        text_digit_vals[unique] = x
+                        x+=1
+
+                df[column] = list(map(convert_to_int, df[column]))
+
+        return df
+  ```
+
+- `set()` --> get the unique values
+- `map()` --> apply the function for element in the list
