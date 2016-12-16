@@ -182,4 +182,10 @@ n: dimensions
   ```
 
 - `set()` --> get the unique values
+
 - `map()` --> apply the function for element in the list
+
+- **`X = preprocessing.scale(X)` is necessarily!**
+- `df.drop(['ticket'], 1, inplace = True)` Do not forget the **Parameters**
+
+  > the '1' and 'inplace = True'
