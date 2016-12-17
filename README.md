@@ -223,3 +223,4 @@ n: dimensions
 - if the centroid is in the circle of an existed centroid, merge the two class, otherwise make a new class
 - replay 1-5 until all the points are marked
 - classify: find index of max(class(point)) set index as the class
+- `print pd.df.describe()` --> show more simply one
