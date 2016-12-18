@@ -220,6 +220,7 @@ n: dimensions
 - center = center + shift
 
 - replay the 2-4 step, make a convergence ![mean - shift](http://pic002.cnblogs.com/images/2012/358029/2012051215101233.jpg)
+
 - if the centroid is in the circle of an existed centroid, merge the two class, otherwise make a new class
 - replay 1-5 until all the points are marked
 - classify: find index of max(class(point)) set index as the class
