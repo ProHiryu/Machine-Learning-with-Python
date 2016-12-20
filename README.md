@@ -222,13 +222,28 @@ n: dimensions
 - replay the 2-4 step, make a convergence ![mean - shift](http://pic002.cnblogs.com/images/2012/358029/2012051215101233.jpg)
 
 - if the centroid is in the circle of an existed centroid, merge the two class, otherwise make a new class
+
 - replay 1-5 until all the points are marked
+
 - classify: find index of max(class(point)) set index as the class
 - `print pd.df.describe()` --> show more simply one
 
 ## Deep Learning
 
 ### Neural Networks
+
 - imagenet -- image data
 - Tenserflow
--
+- one_hot:
+
+  ```python
+  mnist = input_data.read_data_sets("/tmp/data/", one_hot=True)
+
+    # 10 classes, 0-9
+    # the follow is just one_hot
+    #
+    # 0 = [1,0,0,0,0,0,0,0,0,0]
+    # 1 = [0,1,0,0,0,0,0,0,0,0]
+    # 2 = [0,0,1,0,0,0,0,0,0,0]
+    # ........
+  ```
