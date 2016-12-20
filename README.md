@@ -226,6 +226,7 @@ n: dimensions
 - replay 1-5 until all the points are marked
 
 - classify: find index of max(class(point)) set index as the class
+
 - `print pd.df.describe()` --> show more simply one
 
 ## Deep Learning
@@ -247,3 +248,7 @@ n: dimensions
     # 2 = [0,0,1,0,0,0,0,0,0,0]
     # ........
   ```
+
+  - **nltk** --> a package for nature language processing in python
+
+    > for the future
