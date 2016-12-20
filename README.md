@@ -225,3 +225,10 @@ n: dimensions
 - replay 1-5 until all the points are marked
 - classify: find index of max(class(point)) set index as the class
 - `print pd.df.describe()` --> show more simply one
+
+## Deep Learning
+
+### Neural Networks
+- imagenet -- image data
+- Tenserflow
+-
