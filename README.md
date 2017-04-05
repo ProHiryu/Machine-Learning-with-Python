@@ -27,7 +27,7 @@
 
 ### Neural Networks
 
-- [doc](/code/Deep-Learning/dl.md)
+- [docs of dl](/code/Deep-Learning/dl.md)
 - Tenserflow
 
 > the docs will be more completely in future
