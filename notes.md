@@ -252,4 +252,3 @@ n: dimensions
   - **nltk** --> a package for nature language processing in python
 
     > for the future
-  
