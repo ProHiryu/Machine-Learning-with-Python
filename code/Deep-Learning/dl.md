@@ -64,6 +64,21 @@
 ### Deep Learning With Our Own Data
 
 - **nltk** --> a package for nature language processing in python
-- 
 
-  > for the future
+- installation : `sudo python3 -m nltk.downloader -d ~/nltk_data all`
+
+### Simple Preprocessing language
+
+- word_tokenize(line) : separate one line into words
+
+- w_counts = Counter(lexicon)
+
+  > w_counts = {'word':5454}
+
+- words need in [50:1000] times appeared
+
+- list += list **_vs_** list.append()
+
+- `random.shuffle(features)` : remember to shuffle your dataset before fit
+
+- `train_x = list(features[:, 0][:-testing_size])` : try to understand how it means

@@ -79,5 +79,5 @@ if __name__ == '__main__':
     train_x, train_y, test_x, test_y = create_feature_sets_and_labels(
         'pos.txt', 'neg.txt')
     # if you want to pickle this data:
-    with open('/path/to/sentiment_set.pickle', 'wb') as f:
+    with open('sentiment_set.pickle', 'wb') as f:
         pickle.dump([train_x, train_y, test_x, test_y], f)
