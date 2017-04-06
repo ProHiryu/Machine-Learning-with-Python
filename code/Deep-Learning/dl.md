@@ -82,3 +82,7 @@
 - `random.shuffle(features)` : remember to shuffle your dataset before fit
 
 - `train_x = list(features[:, 0][:-testing_size])` : try to understand how it means
+
+### Training and Testing our own dataset
+
+-
