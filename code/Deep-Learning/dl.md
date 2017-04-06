@@ -85,4 +85,18 @@
 
 ### Training and Testing our own dataset
 
--
+- ```python
+  i = 0
+      while i < len(train_x):
+          start = i
+          end = i + batch_size
+          batch_x = np.array(train_x[start:end])
+          batch_y = np.array(train_y[start:end])
+
+          _, c = sess.run([optimizer, cost], feed_dict={x: batch_x,
+                                                        y: batch_y})
+          epoch_loss += c
+          i += batch_size
+  ```
+
+- Use own data means we just change the batch dealing process
