@@ -100,3 +100,5 @@
   ```
 
 - Use own data means we just change the batch dealing process
+
+## Recurrent Neural Network
