@@ -102,3 +102,11 @@
 - Use own data means we just change the batch dealing process
 
 ## Recurrent Neural Network
+
+### Basics
+
+- the traditional nn is [X -> Layer -> Output]
+
+- This is the [RNN](http://blog.csdn.net/heyongluoyao8/article/details/48636251)![the RNN](https://larseidnes.files.wordpress.com/2015/09/rnn-unrolled2.png?w=1008)
+- the Hidden Layer is connected
+- Most used in [NLP(Natural language processing)](https://en.wikipedia.org/wiki/Natural_language_processing)
