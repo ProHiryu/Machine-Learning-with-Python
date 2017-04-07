@@ -22,8 +22,11 @@ def recurrent_neural_network(x):
              'biases': tf.Variable(tf.random_normal([n_classes]))}
 
     x = tf.transpose(x, [1, 0, 2])
+    # print(x)
     x = tf.reshape(x, [-1, chunk_size])
+    # print(x)
     x = tf.split(0, n_chunks, x)
+    # print(x)
 
     lstm_cell = rnn_cell.BasicLSTMCell(rnn_size, state_is_tuple=True)
     outputs, states = rnn.rnn(lstm_cell, x, dtype=tf.float32)
@@ -31,12 +34,6 @@ def recurrent_neural_network(x):
     output = tf.matmul(outputs[-1], layer['weights']) + layer['biases']
 
     return output
-
-x = np.ones((1, 2, 3))
-
-print(x)
-print(np.transpose(x, (1, 0, 2)))
-
 
 def train_neural_network(x):
     prediction = recurrent_neural_network(x)

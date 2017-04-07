@@ -110,4 +110,33 @@
 - This is the [RNN](http://blog.csdn.net/heyongluoyao8/article/details/48636251)![the RNN](http://kvitajakub.github.io/img/rnn-unrolled.svg)
 
 - the Hidden Layer is connected
+
 - Most used in [NLP(Natural language processing)](https://en.wikipedia.org/wiki/Natural_language_processing)
+
+### RNN examples
+
+- `tf.transpose(x, [1, 0, 2])` : just matrix transpose
+
+- transpose in numpy
+
+  ```python
+  import numpy as np
+
+  x = np.ones((1,2,3))
+
+  print(x)
+  print(np.transpose(x,(1,0,2)))
+
+  # [[
+  #   [ 1.  1.  1.],
+  #   [ 1.  1.  1.]
+  # ]]
+  #
+  # [
+  #  [[ 1.  1.  1.]],
+  #  [[ 1.  1.  1.]]
+  # ]
+
+  ```
+- tensorflow needs to transpose into (1,0,2)
+- 
