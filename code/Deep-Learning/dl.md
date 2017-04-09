@@ -155,3 +155,20 @@
 - [convolutional-networks](http://cs231n.github.io/convolutional-networks/#overview)
 
 ### CNN examples
+
+- `weights : tf.Variable(tf.random_normal([5,5,1,32])` : 5 * 5 convolution ,1 input ,32 outputs
+- `weights : W_fc':tf.Variable(tf.random_normal([7*7*64,1024]))` : fully connected 7*7 means we just need the part of the images
+- `tf.nn.conv2d(x, W, strides=[1,1,1,1], padding='SAME')`
+
+  - A list of ints. The stride of the sliding window for each dimension of input. Must be in the same order as the dimension specified with format
+  - padding: A string from: "SAME", "VALID". The type of padding algorithm to use
+
+- `tf.nn.max_pool(x, ksize=[1,2,2,1], strides=[1,2,2,1], padding='SAME')`
+
+  - ksize: The size of the window for each dimension of the input tensor.
+  - strides: The stride of the sliding window for each dimension of the input tensor
+
+- `fc = tf.nn.dropout(fc, keep_rate)`
+
+  - x: A tensor
+  - keep_prob: A scalar Tensor with the same type as x. The probability that each element is kept
