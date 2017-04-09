@@ -21,11 +21,14 @@ convnet = fully_connected(convnet, 1024, activation='relu')
 convnet = dropout(convnet, 0.8)
 
 convnet = fully_connected(convnet, 10, activation='softmax')
-convnet = regression(convnet, optimizer='adam', learning_rate=0.01, loss='categorical_crossentropy', name='targets')
+convnet = regression(convnet, optimizer='adam', learning_rate=0.01,
+                     loss='categorical_crossentropy', name='targets')
 
 model = tflearn.DNN(convnet)
 model.fit({'input': X}, {'targets': Y}, n_epoch=10, validation_set=({'input': test_x}, {'targets': test_y}),
-    snapshot_step=500, show_metric=True, run_id='mnist')
+          snapshot_step=500, show_metric=True, run_id='mnist')
+
+model.save('tflearncnn.model')
 
 # model = tflearn.DNN(convnet)
 # model.fit({'input': X}, {'targets': Y}, n_epoch=5, validation_set=({'input': test_x}, {'targets': test_y}),

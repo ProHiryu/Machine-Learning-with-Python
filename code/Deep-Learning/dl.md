@@ -180,3 +180,35 @@
 TFlearn is a modular and transparent deep learning library built on top of Tensorflow. It was designed to provide a higher-level API to TensorFlow in order to facilitate and speed-up experimentations, while remaining fully transparent and compatible with it.
 
 ### TFLearn for CNN
+
+- the example:
+
+  ```python
+  X, Y, test_x, test_y = mnist.load_data(one_hot=True)
+
+  X = X.reshape([-1, 28, 28, 1])
+  test_x = test_x.reshape([-1, 28, 28, 1])
+
+  convnet = input_data(shape=[None, 28, 28, 1], name='input')
+
+  convnet = conv_2d(convnet, 32, 2, activation='relu')
+  convnet = max_pool_2d(convnet, 2)
+
+  convnet = conv_2d(convnet, 64, 2, activation='relu')
+  convnet = max_pool_2d(convnet, 2)
+
+  convnet = fully_connected(convnet, 1024, activation='relu')
+  convnet = dropout(convnet, 0.8)
+
+  convnet = fully_connected(convnet, 10, activation='softmax')
+  convnet = regression(convnet, optimizer='adam', learning_rate=0.01,
+                       loss='categorical_crossentropy', name='targets')
+
+  model = tflearn.DNN(convnet)
+  model.fit({'input': X}, {'targets': Y}, n_epoch=10, validation_set=({'input': test_x}, {'targets': test_y}),
+            snapshot_step=500, show_metric=True, run_id='mnist')
+
+  model.save('tflearncnn.model')
+  ```
+
+- `model.save('tflearncnn.model')` : only save the frame but not the values
