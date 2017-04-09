@@ -212,3 +212,5 @@ TFlearn is a modular and transparent deep learning library built on top of Tenso
   ```
 
 - `model.save('tflearncnn.model')` : only save the frame but not the values
+
+- `model.predict([test_x[1]])` : the parameters must be list
