@@ -172,3 +172,7 @@
 
   - x: A tensor
   - keep_prob: A scalar Tensor with the same type as x. The probability that each element is kept
+
+## TFLearn
+
+> [tflearn.org](https://tflearn.org)
