@@ -128,15 +128,30 @@
   print(np.transpose(x,(1,0,2)))
 
   # [[
-  #   [ 1.  1.  1.],
-  #   [ 1.  1.  1.]
+  #   [ 1\.  1\.  1.],
+  #   [ 1\.  1\.  1.]
   # ]]
   #
   # [
-  #  [[ 1.  1.  1.]],
-  #  [[ 1.  1.  1.]]
+  #  [[ 1\.  1\.  1.]],
+  #  [[ 1\.  1\.  1.]]
   # ]
-
   ```
+
 - tensorflow needs to transpose into (1,0,2) means 3-d -> 3-d ; 1-d -> 2-d ; 2-d -> 1-d
--
+
+## Convolutional Neural Network
+
+### Basics
+
+- Convolution + Pool = Hidden Layer
+
+- Fully Connected : just the same as the ordinary nn
+
+- the whole structure: ![](http://cs231n.github.io/assets/nn1/neural_net2.jpeg)
+
+- the hidden layer: ![](http://cs231n.github.io/assets/cnn/cnn.jpeg)
+
+- [convolutional-networks](http://cs231n.github.io/convolutional-networks/#overview)
+
+### CNN examples
