@@ -168,7 +168,7 @@
   - ksize: The size of the window for each dimension of the input tensor.
   - strides: The stride of the sliding window for each dimension of the input tensor
 
-- `fc = tf.nn.dropout(fc, keep_rate)`
+- `fc = tf.nn.dropout(fc, keep_rate)` : **_[Dropout](https://en.wikipedia.org/wiki/Convolutional_neural_network#Dropout)_**
 
   - x: A tensor
   - keep_prob: A scalar Tensor with the same type as x. The probability that each element is kept
@@ -176,3 +176,7 @@
 ## TFLearn
 
 > [tflearn.org](https://tflearn.org)
+
+TFlearn is a modular and transparent deep learning library built on top of Tensorflow. It was designed to provide a higher-level API to TensorFlow in order to facilitate and speed-up experimentations, while remaining fully transparent and compatible with it.
+
+### TFLearn for CNN
